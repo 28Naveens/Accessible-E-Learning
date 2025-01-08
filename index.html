@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible E-Learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Hollow Monarchs</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Welcome to Accessible E-Learning</h1>
+        <p>Your gateway to great content, sign language, and accessibility features.</p>
+    </header>
+
+    <!-- About Section with Cards and Pop-Out -->
+    <section class="about">
+        <h2>About Our Accessibility Features</h2>
+        <div class="about-cards">
+            <div class="about-card">
+                <h3>Text-to-Speech (TTS)</h3>
+                <p>
+                    Text-to-Speech (TTS) functionality allows users to input text and have it read aloud to them. This is helpful for students with visual impairments or those who prefer auditory learning.
+                </p>
+            </div>
+            <div class="about-card">
+                <h3>Sign Language</h3>
+                <p>
+                    Sign language videos are available for key terms and phrases. These videos help students who are hearing impaired understand content visually, in a language they are familiar with.
+                </p>
+            </div>
+            <div class="about-card">
+                <h3>Subtitles</h3>
+                <p>
+                    Subtitles are provided for all videos to support students who are hearing impaired. The subtitles will display text to match the content spoken or presented in videos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (TTS, Sign Language Video, Subtitles) -->
+    <section class="services">
+        <h2>Services</h2>
+
+        <!-- Text-to-Speech (TTS) -->
+        <div class="service-card">
+            <h3>Text-to-Speech (TTS)</h3>
+            <textarea id="text-input" placeholder="Enter text here" rows="5" cols="50"></textarea><br>
+            <button id="speak-btn">Speak Text</button>
+        </div>
+
+        <!-- Sign Language Images as Cards -->
+        <div class="service-card sign-language-card">
+            <h3>Sign Language</h3>
+            <div class="sign-language-images">
+                <div class="sign-image-card">
+                    <img src="goman.webp" width="300" height="250">
+                </div>
+                <div class="sign-image-card">
+                    <img src="minadf.png" width="300" height="250">
+                </div>
+                <div class="sign-image-card">
+                    <img src="mon.webp" width="300" height="250">
+                </div>
+            </div>
+        </div>
+
+        <!-- Subtitles Section with One Video -->
+        <div class="service-card">
+            <h3>Subtitles</h3>
+            <div class="video-container">
+                <video id="video-with-subtitles" width="640" height="360" controls>
+                    <source id="video-src" src="VIDEO2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="subtitle-box">
+                <div id="subtitle-column1">
+                    <p>Subtitles will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 MySite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003366; /* Dark blue */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ff6347; /* Orange color */
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #003366; /* Dark blue */
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.about-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+.about-card p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    background-color: #e0f2f1;
+}
+
+.services h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden for scroll effect */
+    transition: opacity 0.5s ease-in-out; /* Fade-in effect */
+}
+
+.service-card.visible {
+    opacity: 1; /* Make visible when in viewport */
+}
+
+/* Sign Language Section - Aligning images in a row */
+.sign-language-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.sign-language-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #003366;
+}
+
+.sign-language-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sign-image-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sign-image-card:hover {
+    transform: scale(1.05);
+}
+
+.sign-image-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Subtitle Box with One Column */
+.subtitle-box {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    gap: 10px;
+    justify-items: center;
+}
+
+#subtitle-column1, #subtitle-column2, #subtitle-column3 {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+/* Center the video container */
+.video-container {
+    display: flex;
+    justify-content: center; /* Center the video horizontally */
+    margin-bottom: 20px;
+}
+
+#video-with-subtitles {
+    max-width: 100%; /* Ensure video is responsive */
+    height: auto;
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+/* Scroll Effect for Elements */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.visible {
+    animation: fadeIn 1s forwards;
+}
+#text-input {
+    width: 100%; /* Make the textarea span the entire width */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+.subtitle-box {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 10px;
+    justify-items: stretch; /* Make each subtitle column stretch to fit available space */
+}
+#subtitle-column1, #subtitle-column2, #subtitle-column3 {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 200px;
+    overflow-y: scroll;
+    width: 100%; /* Ensure columns fill the available width */
+    box-sizing: border-box;
+}
+.video-container {
+    display: flex;
+    justify-content: center; /* Center the video horizontally */
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+#video-with-subtitles {
+    max-width: 100%; /* Ensure video is responsive */
+    height: auto;
+}
+#speak-btn {
+    background-color: #ff6347; /* Orange color */
+    color: white;
+    padding: 15px 30px; /* Increase padding for larger button */
+    font-size: 18px; /* Increase font size */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+#speak-btn:hover {
+    background-color: #ff4500; /* Darker orange */
+    transform: scale(1.1); /* Slightly enlarge button */
+}
+
+/* Focus effect for button */
+#speak-btn:focus {
+    outline: none;
+}
